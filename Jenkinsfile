@@ -1,13 +1,13 @@
 node {
     
 	
-    env.AWS_ECR_LOGIN=true
+    //env.AWS_ECR_LOGIN=true
     def newApp
     def registry = 'gustavoapolinario/microservices-node-todo-frontend'
     def registryCredential = 'dockerhub'
 	
 	stage('Git') {
-		git 'https://github.com/gustavoapolinario/node-todo-frontend'
+		git 'git@github.com:sinesiobittencourt/node-todo-frontend.git'
 	}
 	stage('Build') {
 		sh 'npm install'
